@@ -29,8 +29,9 @@ module TooDead
 		def update_list_as_finished(name)
 			@list = List.find_by_name(name)
 			unless @list.nil?
-				@list.finished = true
-				@list.save!
+				# @list.finished = true
+				# @list.save!
+				@list.update(finished: true)
 			end
 		end
 
